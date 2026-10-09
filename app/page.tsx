@@ -1,7 +1,10 @@
-import Image from "next/image";
+import { Suspense } from 'react';
+import Chat from './chat';
 
-export default function Home() {
+export default function Page() {
   return (
-    <h1>Welcome to SQL Agent</h1>
+    <Suspense fallback={<div>Loading chat...</div>}>
+      <Chat />
+    </Suspense>
   );
 }
